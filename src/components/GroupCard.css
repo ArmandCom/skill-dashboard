@@ -1,0 +1,136 @@
+.group-card {
+  background: var(--surface);
+  border-radius: 22px;
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.group-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.group-emoji {
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.group-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.group-name {
+  font-size: 18px;
+  font-weight: 650;
+  color: var(--text);
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.group-avg {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.group-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.ctrl-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: background 0.15s, color 0.15s;
+}
+
+.ctrl-btn:active {
+  background: var(--surface2);
+  color: var(--text);
+}
+
+.options-wrap {
+  position: relative;
+}
+
+.options-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+}
+
+.options-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  z-index: 10;
+  min-width: 150px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+.options-item {
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  text-align: left;
+  font-size: 15px;
+  color: var(--text);
+  transition: background 0.1s;
+}
+
+.options-item.danger { color: #ff6b6b; }
+.options-item:active { background: rgba(255,255,255,0.05); }
+
+.no-skills {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 4px;
+}
+
+.add-first-btn {
+  font-size: 14px;
+  color: var(--text-muted);
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: var(--surface2);
+  transition: opacity 0.15s;
+}
+
+.add-first-btn:active { opacity: 0.6; }
+
+.skills-row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.skills-row::-webkit-scrollbar { display: none; }
